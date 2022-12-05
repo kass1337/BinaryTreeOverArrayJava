@@ -15,7 +15,7 @@ public class IntegerType implements ProtoType {
 
     @Override
     public String typeName() {
-        return "INTEGER";
+        return "Integer";
     }
 
     @Override

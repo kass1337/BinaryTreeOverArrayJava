@@ -150,12 +150,12 @@ public class GUI extends JPanel implements ActionListener {
 
         // обработчик сохранения
         if (e.getSource() == saveBinary){
-            btsArray.save();
+            btsArray.save(protoType, "saved");
         }
 
         // обработчик загрузки
         if (e.getSource() == loadBinary){
-            btsArray = btsArray.load();
+            btsArray = btsArray.load(protoType, "saved");
             rewrite();
         }
     }

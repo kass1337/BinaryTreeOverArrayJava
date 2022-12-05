@@ -14,7 +14,7 @@ public class DateTimeType implements ProtoType {
 
     @Override
     public String typeName() {
-        return "DATETIME";
+        return "DateTime";
     }
 
     @Override

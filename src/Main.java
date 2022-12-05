@@ -14,7 +14,7 @@ public class Main {
 
         //СД для ТД Integer
         System.out.println("--------------TEST FOR INTEGER-------------");
-        protoType = factoryType.getBuilderByName("Integer");
+        protoType = FactoryType.getBuilderByName("Integer");
         btsArray = new BinaryTreeArray(protoType.getTypeComparator());
 
         btsArray.addValue(protoType.create());
@@ -39,14 +39,14 @@ public class Main {
         btsArray.printTree();
 
         System.out.println("-----SAVE IN BINARY FILE----");
-        btsArray.save();
+        btsArray.save(protoType, "saved");
 
         System.out.println("-----------BALANCE----------");
         btsArray = btsArray.balance();
         btsArray.printTree();
 
         System.out.println("---LOAD FROM BINARY FILE----");
-        btsArray = btsArray.load();
+        btsArray = btsArray.load(protoType, "saved");
         btsArray.printTree();
 
         System.out.println("---------FOR EACH-----------");
@@ -79,14 +79,14 @@ public class Main {
         btsArray.printTree();
 
         System.out.println("-----SAVE IN BINARY FILE----");
-        btsArray.save();
+        btsArray.save(protoType, "saved");
 
         System.out.println("-----------BALANCE----------");
         btsArray = btsArray.balance();
         btsArray.printTree();
 
         System.out.println("---LOAD FROM BINARY FILE----");
-        btsArray = btsArray.load();
+        btsArray = btsArray.load(protoType, "saved");
         btsArray.printTree();
 
         System.out.println("---------FOR EACH-----------");
